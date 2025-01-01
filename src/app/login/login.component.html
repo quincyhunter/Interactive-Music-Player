@@ -1,0 +1,17 @@
+<div class="page-container">
+    <div class="login-card">
+      <h1>Interactive Music Player</h1>
+      <h2>Login</h2>
+      
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  
+      <input type="email" [(ngModel)]="email" placeholder="Email" />
+      <input type="password" [(ngModel)]="password" placeholder="Password" />
+  
+      <button (click)="onLogin()">Login</button>
+      <p>
+        Don't have an account? <a routerLink="/signup">Sign up here</a>
+      </p>
+    </div>
+  </div>
+  

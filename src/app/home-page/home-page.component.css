@@ -1,0 +1,243 @@
+head {
+    background-color: #f3f4f6;
+
+}
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button
+{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+#trackInfo
+{
+    margin: 10px;
+}
+input[type="text"], input[type="file"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+.menu-container
+{
+    display: flex;
+}
+.menu-buttons {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+}
+
+.menu-buttons:hover {
+    background-color: #2980b9;
+}
+.audio-container {
+    display: flex;
+    align-items: center; /* This vertically centers the audio player and buttons */
+    justify-content: center; /* Horizontally centers the content if needed */
+    gap: 5px; /* Adjusts the space between elements */
+}
+
+#back-button, #forward-button {
+    /* Removed 'display: flex;' as it's not needed for simple buttons */
+    cursor: pointer; /* Adds a pointer cursor on hover for better UX */
+    background-color: #3498db; /* Adjust color as per your design */
+    color: white;
+    border: none;
+    padding: 0px;
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height, equal to width for a circle */
+    border-radius: 25px;
+
+    position: bottom;
+    
+}
+#audioPlayer
+{
+    display:flex;
+    width: 500px;
+}
+audio {
+    width: 100%;
+    max-width: 600px;
+}
+#libraryList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#libraryList li {
+    background-color: #f3f4f6;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.queue-dropdown {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Adjust as needed */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 100;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 10px;
+    margin-right: 100px;
+}
+
+.queue-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.queue-dropdown li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.queue-dropdown li:first-child {
+    font-weight: bold;
+    color: #3498db; /* Or any color that fits your theme */
+}
+
+.queue-dropdown li:nth-child(2) {
+    margin-top: 10px;
+    font-style: italic;
+}
+.webcam-container {
+    position: absolute;
+    top: 10px; /* Adjust margin as needed */
+    left: 10px; /* Adjust margin as needed */
+    z-index: 101; /* Ensure webcam is above other content if needed */
+}
+
+.main-container {
+    width: 80%; /* Adjust based on desired width */
+    max-width: 1200px; /* Adjust for maximum width */
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.custom-file-upload {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 1px;
+    width: 100%; /* Fixed width */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    font-size: 14px;
+    margin: 10px
+}
+.custom-file-upload:hover {
+    background-color: #b3d9ff; /* Light blue color on hover */
+}
+#file-upload-placeholder {
+    display: inline-block;
+    cursor: pointer;
+    width: 140px;
+    overflow: hidden;
+    text-align: center;
+
+}
+#img-upload-placeholder {
+    display: inline-block;
+    cursor: pointer;
+    width: 140px;
+    overflow: hidden;
+    text-align: center;
+
+}
+.cover-art-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    margin: auto;
+}
+
+.cover-art-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* This ensures the image keeps its aspect ratio */
+}
+.queue-dropdown h2 {
+    text-align: center;
+    margin: 10px 0;
+    /* ... additional styling for the title ... */
+}
+
+.clear-queue-btn {
+    background-color: #ff4d4d; /* Red color for clear action, adjust as needed */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    /* ... additional styling for the button ... */
+}
+
+.clear-queue-btn:hover {
+    background-color: #ff3333; /* Darker shade for hover, adjust as needed */
+}
+hr.dashed {
+    border-top: 2px dotted #bbb;
+  }
+
+.control-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0; /* No margin to ensure buttons are adjacent */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+}
+
+.control-btn:hover {
+    background-color: #2980b9;
+}

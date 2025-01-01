@@ -1,0 +1,115 @@
+/* 
+ * 1) Overall page styling
+ *    (Center everything, add a gradient background)
+ */
+ .page-container {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    min-height: 100vh;       /* take up full screen height */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /*  alternative gradient example:
+        background: linear-gradient(135deg, #9face6 0%, #74ebd5 100%);
+    */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /*
+   * 2) The card container
+   */
+  .login-card {
+    background: #fff;              /* white card background */
+    border-radius: 8px;            /* rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* subtle shadow */
+    width: 350px;                  /* max width for the card */
+    padding: 2rem;                 /* spacing inside */
+    text-align: center;            /* center the text inside */
+  
+    display: flex;
+    flex-direction: column;        /* stack elements vertically */
+    gap: 1rem;                     /* space between elements */
+  }
+  
+  /*
+   * 3) Headings
+   */
+  .login-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-card h2 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  /*
+   * 4) Inputs
+   */
+  .login-card input[type="email"],
+  .login-card input[type="password"] {
+    width: 93%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .login-card input[type="email"]:focus,
+  .login-card input[type="password"]:focus {
+    border-color: #9face6; /* accent color on focus */
+  }
+  
+  /*
+   * 5) Button
+   */
+  .login-card button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #9face6; /* you can match your gradient color or any accent */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .login-card button:hover {
+    background: #8c90db;
+    box-shadow: 0 4px 12px rgba(140, 144, 219, 0.4);
+  }
+  
+  /*
+   * 6) Error message styling
+   */
+  .login-card .error {
+    color: #b71c1c; /* a red/danger color */
+    font-size: 0.9rem;
+    margin-bottom: -0.5rem; /* tighten up spacing if needed */
+  }
+  
+  /*
+   * 7) Text & link styling
+   */
+  .login-card p {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .login-card a {
+    color: #9face6;
+    text-decoration: none;
+  }
+  
+  .login-card a:hover {
+    text-decoration: underline;
+  }
+  

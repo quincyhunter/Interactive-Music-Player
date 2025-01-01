@@ -1,0 +1,53 @@
+<body>
+    <div class="top-bar">
+        <div class="webcam-container">
+            <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+            <div *ngIf="gesture !== 'None'" [innerHTML]="gesture"></div>
+    </div>
+
+        <h1>Music Library 🎵</h1>
+        
+        
+
+        <div class="header-buttons">
+            <button (click)="toggleQueue()">
+                <span *ngIf = 'isQueueVisible === false'>View Queue</span>
+                <span *ngIf = 'isQueueVisible === true'>Hide Queue</span>                
+            </button>
+
+            <button routerLink="/home">Back to Home</button>
+            <div class="queue-dropdown" *ngIf="isQueueVisible">
+                <h2>Music Queue</h2>
+                <hr class="dashed">
+                <ul>
+                    <li *ngFor="let track of musicPlayer.getQueue().slice(0, 11); let i = index">
+                        {{ i + 1 }}. {{ track.artist() }} - {{ track.name() }}
+                    </li>
+                </ul>
+                <button (click)="musicPlayer.clearQueue(true)" class="clear-queue-btn">Clear Queue</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="library-container">
+    
+    
+    <ul id="libraryList">
+        <li *ngFor="let track of library">
+            <div class="track-container">
+            <img [src] = 'getCoverArtUrl(track)' class="cover-art" alt="Cover Art">
+            {{ track.artist() }} - {{ track.name() }}
+            <div class="track-actions">
+                <button (click)="playSample(track, $event)" class ="play-sample-btn" >
+                <span *ngIf="currentPlayingTrack !== track">▶️ Sample</span>
+                <span *ngIf="currentPlayingTrack === track">⏸️ Sample</span>
+                </button>
+                <button (click)="addToQueue(track)" class="add-to-queue-btn">📝 Add To Queue</button>
+            </div>
+           </div>
+        </li>
+    </ul>
+    
+    </div>    
+</body>
+
